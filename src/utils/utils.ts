@@ -3,7 +3,9 @@
  * @param {*} array
  * @returns
  */
-export function shuffle(array) {
+import {Card} from "../Card";
+
+export function shuffle(array: any[]) {
   const length = array == null ? 0 : array.length;
   if (!length) {
     return [];
@@ -20,7 +22,11 @@ export function shuffle(array) {
   return result;
 }
 
-export function orderPai(array) {
+/**
+ * 牌组排序
+ * @param array
+ */
+export function orderPai(array: Card[]) {
   const wPai = array
     .filter((item) => item.type === "W")
     .sort((a, b) => a.number - b.number);

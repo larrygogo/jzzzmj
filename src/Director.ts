@@ -1,5 +1,5 @@
 export class Director {
-  static instance = null;
+  static instance: Director | null = null;
 
   constructor() {
     console.log("初始化");
